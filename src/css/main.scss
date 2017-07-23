@@ -77,6 +77,14 @@ form{
         }
         width: 100%;
     }
+    textarea{
+        min-height: 200px;
+    }
+}
+
+#main-view{
+    height: 100%;
+    display: initial;
 }
 
 .navbar {
@@ -266,8 +274,18 @@ form{
         font-size: 40px;
         margin-top: 20px;
     }
+    h2{
+        width: 80%;
+        line-height: 1.5em;
+        font-family: $lato;
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 15px;
+        // color: $lightblack;
+    }
     p{
         width: 80%;
+        font-weight: 400;
         font-family: $raleway;
         font-size: 18px;
         line-height: 1.5em;
@@ -318,30 +336,33 @@ form{
         }
     }
 }
-.slide.three{
-    display: block;
-    height: 100%;
-    .container-fluid{
-        height: 100%;
-        .row{
-            height: 100%;
-            .column-aside-map{
-                margin-top: 80px;
-                padding: 20px;
-                padding-bottom: 0px;
-            }
-            .map-column{
-                margin-top: 20px;
-                height: 100%;
-                padding: 0px;
-                #map{
-                    height: 100%;
-                }
-            }
+
+.slide.three, .slide.four{
+    .content{
+        p{
+            font-size: 20px;
         }
     }
 }
+.slide.three{
+    background-color: $darkblue;
+    color: $white;
+}
+// .slide.four{
+//     background-color: $darkblue;
+//     color: $white;
+// }
 .slide.four{
+    .content{
+        align-items: flex-end;
+        p{
+            text-align: right;
+        }
+    }
+
+}
+
+.slide.five{
     .form-group{
         margin-top: 15px;
         width: 50%;
@@ -351,6 +372,7 @@ form{
         }
     }
 }
+
 
 #map{
     min-height: 500px;
@@ -374,7 +396,7 @@ footer{
     width: 100%;
     padding: 25px;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .navbar {
         #menu {
             display: none;
@@ -396,14 +418,14 @@ footer{
             }
         
     }
-    .slide.four{
+    .slide.five{
         .form-group{
             width: 100%;
         }
     }
 }
 
-@media (min-width: 701px) {
+@media (min-width: 801px) {
     .dropdown-menu {
         display: none;
     }

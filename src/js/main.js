@@ -12,6 +12,10 @@ function scrollpage(str) {
     );
 }
 
+function loadPage(pageName){
+	$('#main-view').load(pageName);
+}
+
 $(window).on("scroll", function() {
     if ($(window).scrollTop() > 50) {
         $(".navbar").addClass("active");
