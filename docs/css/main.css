@@ -284,6 +284,8 @@ footer {
   .drawer {
     display: block; }
   .slide p {
+    width: 100%; }
+  .slide.four .form-group {
     width: 100%; } }
 
 @media (min-width: 701px) {
