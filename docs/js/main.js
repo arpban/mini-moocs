@@ -6,6 +6,12 @@ function openDrawer() {
     $('header').toggleClass('open');
 }
 
+function scrollpage(str) {
+    $('html,body').animate({
+        scrollTop: $(str).offset().top
+    }, 'slow');
+}
+
 $(window).on("scroll", function () {
     if ($(window).scrollTop() > 50) {
         $(".navbar").addClass("active");

@@ -11,9 +11,9 @@
 	<body>
 		<div class="navbar">
 			<div id="menu" class="pull-right">
-				<a href="#" class="menu-item active">ABOUT</a>
-				<a href="#" class="menu-item">WORK</a>
-				<a href="#" class="menu-item">CONTACT</a>
+				<a href="#" onclick="scrollpage('.two')" class="menu-item active">ABOUT</a>
+				<a href="#" onclick="scrollpage('.three')" class="menu-item">WORK</a>
+				<a href="#" onclick="scrollpage('.four')" class="menu-item">CONTACT</a>
 			</div>
 			<div id="logo" class="">
 				<a href="#">MINI MOOCS</a>
@@ -29,18 +29,103 @@
 				<a href="#" class="menu-item" >CONTACT</a>
 			</div>
 		</div>
-		<div class="slides">
-			<div class="slide one">
+		
+		
+		<div class="dot-map">
+			<img src="img/dot-map2.png" />
+		</div>
+		<div class="slide one">
+			<div class="content">
 				<div class="header">MINI MOOCS</div>
 				<div class="sub-header">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</div>
-				<button class="btn1">Learn More</button>
-				<img src="img/dot-map2.png" />
+				<button class="btn1" onclick="scrollpage('.two')">Learn More</button>
 			</div>
 		</div>
+		<div class="slide two">
+			<div class="content">
+				<header>About</header>
+				<p>
+					Lorem ipsum dolor sit amet, eu sonet tantas diceret vim, enim simul facilisi eu vis, mei te vide integre perfecto. Bonorum tractatos pro ei. Albucius gubergren ei pri, quod appareat ut nec, voluptaria accommodare ei eos. Habemus constituto duo et. Munere scripta cu est, duo mucius philosophia et, eum in velit ignota putant.
+
+					Eros offendit eam at, an quot utinam corpora pro. Te sed saepe repudiare, qui ei aeque choro. Ut vim brute persecuti, everti omnium sanctus qui ea, tamquam recteque suavitate has in. Nam ex verterem facilisis, id eam agam ferri. Ex eius inani nec, vel eu movet reprimique, libris deleniti definitionem has te. Est porro insolens cu, case falli democritum eos at, ex pro consulatu assentior. Cu tamquam vituperata deterruisset per.
+				</p>
+				<button class="icon" onclick="scrollpage('.three')">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="4" x2="12" y2="20"></line><polyline points="18 14 12 20 6 14"></polyline></svg>
+				</button>
+			</div>
+		</div>
+		<div class="slide three">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 column-aside-map">
+						<header>A New Heading</header>
+						<p>Lorem ipsum dolor sit amet, eu sonet tantas diceret vim, enim simul facilisi eu vis, mei te vide integre perfecto. Bonorum tractatos pro ei.</p>
+						<header>Here is a List</header>		
+						<ul>
+							<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+							<li>Suspendisse ut eros quis diam vulputate ultrices sed eu urna.</li>
+							<li>Vivamus sit amet eros vitae lectus varius efficitur quis ac ipsum.</li>
+							<li>Donec non ligula rutrum, suscipit enim quis, tristique turpis.</li>
+						</ul>
+						<button class="icon" onclick="scrollpage('.four')">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="4" x2="12" y2="20"></line><polyline points="18 14 12 20 6 14"></polyline></svg>
+						</button>	
+					</div>
+					<div class="col-xs-12 col-sm-6 map-column">
+						<div id="map"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide four">
+			<div class="content">
+				<header>Contact</header>
+				<div class="form-group">
+					<form action="#">
+						<input type="text" name="" placeholder="Name">
+						<input type="email" name="" placeholder="Email">
+						<textarea>Your Message</textarea>
+						<input type="submit" class="btn1" name="">
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div class="text">&copy mini moocs</div>
+			<div class="icons"></div>
+		</footer>
+		
 		<script
 		src="https://code.jquery.com/jquery-3.2.1.min.js"
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			function initMap() {
+		        var map = new google.maps.Map(document.getElementById('map'), {
+		        	center: {lat: -34.397, lng: 150.644},
+		            scrollwheel: false,
+		            zoom: 8
+		        });
+		        var marker = new google.maps.Marker({
+		        	position: {lat: -34.397, lng: 150.644},
+		        	map: map
+		        });
+		        var marker = new google.maps.Marker({
+		        	position: {lat: -34.397, lng: 150.9},
+		        	map: map
+		        });
+		        var marker = new google.maps.Marker({
+		        	position: {lat: -35, lng: 150.644},
+		        	map: map
+		        });
+		        var marker = new google.maps.Marker({
+		        	position: {lat: -36, lng: 150},
+		        	map: map
+		        });
+		    }
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu0lIyrrbuInKalaiHkHlQzWgpeJFamNk&callback=initMap"
+    	async defer></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
